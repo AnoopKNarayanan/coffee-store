@@ -31,6 +31,8 @@ export class ProductListComponent implements OnInit {
       }
     );
     this.getPaginatedProducts();
+
+    //not dispatching from here as this will reload the data when back button is clicked.
     //this.store.dispatch(ProductActions.loadProducts({url: 'https://random-data-api.com/api/coffee/random_coffee?size=50'}));
   }
 
