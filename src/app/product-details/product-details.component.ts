@@ -41,7 +41,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   /**
-   * Function to navigate backto the Product list page.
+   * Function to navigate back to the Product list page.
    */
   goBack(): void {
     this.router.navigate(['/coffee-store'], { queryParams: { page: this.page } });

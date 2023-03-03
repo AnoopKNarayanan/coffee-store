@@ -23,8 +23,8 @@ describe('ProductDetailsComponent', () => {
     .compileComponents();
 
     store = TestBed.inject(MockStore);
-    router = TestBed.get(Router);
-    route = TestBed.inject(ActivatedRoute)
+    router = TestBed.inject(Router);
+    route = TestBed.inject(ActivatedRoute);
     fixture = TestBed.createComponent(ProductDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
