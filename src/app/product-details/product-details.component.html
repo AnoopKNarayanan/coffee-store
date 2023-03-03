@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+	<div class="col-8 mt-4" *ngIf="productDetails$ | async as productDetails">
+		<h4>Product Details</h4>
+        <hr class="hr hr-blurry">
+		<div class="row mt-4">
+			<div class="col-md-5 col-lg-7">
+				<img class="card-img-top" src="assets/images/coffee.jpg" alt="Coffee">
+				<div class="mt-4">
+					<div>
+						<h4 class="card-title">{{productDetails.blend_name}}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7 col-lg-5 mt-4">
+				<div class="card-body">
+					<div class="table">
+						<div class="row">
+							<div class="col fw-bolder">Variety</div>
+							<div class="col">{{productDetails.variety}}</div>
+						</div>
+						<hr class="hr hr-blurry">
+						<div class="row">
+							<div class="col fw-bolder">Notes</div>
+							<div class="col">{{productDetails.origin}}</div>
+						</div>
+						<hr class="hr hr-blurry">
+						<div class="row">
+							<div class="col fw-bolder">Origin</div>
+							<div class="col">{{productDetails.notes}}</div>
+						</div>
+						<hr class="hr hr-blurry">
+						<div class="row">
+							<div class="col fw-bolder">Intensifier</div>
+							<div class="col">{{productDetails.intensifier}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-4 d-flex flex-row-reverse">
+			<button class="btn btn-primary bg-dark" (click)="goBack()">
+				Back To Coffee Store</button>
+		</div>
+	</div>
+
+</div>

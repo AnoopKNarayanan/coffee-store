@@ -1,0 +1,56 @@
+.pagination {
+    display: flex;
+    border-radius: 0.25rem;
+  }
+  .page-item {
+    display: inline-flex;
+    margin: 0 0.25rem 0 0.25rem;
+  }
+  .page-item:first-child .page-link {
+    margin-left: 0;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+  }
+  .page-item:last-child .page-link {
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .page-item.active .page-link,
+  .page-item.active .page-link:focus,
+  .page-item.active .page-link:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: rgba(33, 37, 41);
+    border-color: rgba(33, 37, 41);
+  }
+  .page-item.disabled .page-link,
+  .page-item.disabled .page-link:focus,
+  .page-item.disabled .page-link:hover {
+    color: #818a91;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+  }
+  .disabled {
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .page-link {
+    position: relative;
+    float: left;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    color: rgba(33, 37, 41);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  .page-link:focus,
+  .page-link:hover {
+    color: #5a5c5a;
+    background-color: #eceeef;
+    border-color: #ddd;
+  }
