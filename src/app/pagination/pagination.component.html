@@ -2,7 +2,7 @@
     <li [ngClass]="{ 'page-item': true, 'disabled': prevDisabled }" (click)="prevPage()"><span class="page-link">Prev</span></li>
     <li
       *ngFor="let page of pages"
-      [ngClass]="{ 'page-item': true, active: currPage === page }"
+      [ngClass]="{ 'page-item': true, 'active': currPage == page }"
       (click)="changePage.emit(page)"
     >
       <span class="page-link">{{ page }}</span>

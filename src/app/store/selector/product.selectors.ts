@@ -7,7 +7,11 @@ export const selectProductState = createFeatureSelector<ProductReducer.ProductSt
     ProductReducer.productFeatureKey
 );
 
-/* Selector to select Product from Store based on id */
+/**
+ * Selector to select Product from Store based on Id
+ * @param id Unique Id of the product
+ * @returns Product details
+ */
 export const selectProductById = (id: number) => createSelector(
     selectProductState,
     (state: any) => {
@@ -15,7 +19,12 @@ export const selectProductById = (id: number) => createSelector(
     }
 );
 
-/* Selector to select list of Products from store between a range */
+/**
+ * Selector to select list of Products from store between a range
+ * @param start Starting index
+ * @param end Ending index
+ * @returns List of Products
+ */
 export const selectPaginatedProducts = (start: number, end: number) => createSelector(
     selectProductState,
     (state: any) => {

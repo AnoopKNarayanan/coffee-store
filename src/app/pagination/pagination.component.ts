@@ -21,23 +21,42 @@ export class PaginationComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.count = Math.ceil(this.size / this.limit);
     this.count > 1 ? this.nextDisabled = false : this.nextDisabled = true;
-    this.pages = this.getPageNos();
+    this.pages = this.getPageNos(); 
+    this.checkPrevNext();   
   }
 
+  /**
+   * To enable/disable Prev/Next buttons on the view, based on active page
+   * @param changes SimpleChanges object
+   */
   ngOnChanges(changes: SimpleChanges): void {
-    this.currPage == 1 ? this.prevDisabled = true : this.prevDisabled = false;
-    this.currPage == this.count ? this.nextDisabled = true : this.nextDisabled = false;
+    this.checkPrevNext();
   }
 
+  /**
+   * Function to calculate total number of pages
+   * @returns Number of pages
+   */
   getPageNos(): number[] {
     return [...Array(this.count).keys()].map((el) => el + 1);
   }
 
+  /**
+   * Function triggered when previous page is requested
+   */
   prevPage() {
     (this.currPage > 1 && this.currPage <= this.count) ? this.changePage.emit(this.currPage - 1) : this.prevDisabled = true;
   }
 
+  /**
+   * Function triggered when next page is requested
+   */
   nextPage() {
     (this.currPage > 0 && this.currPage < this.count) ? this.changePage.emit(this.currPage + 1) : this.nextDisabled = true;
+  }
+
+  checkPrevNext() {
+    this.currPage == 1 ? this.prevDisabled = true : this.prevDisabled = false;
+    this.currPage == this.count ? this.nextDisabled = true : this.nextDisabled = false;
   }
 }

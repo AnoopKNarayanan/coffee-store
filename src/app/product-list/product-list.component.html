@@ -6,7 +6,7 @@
                     <div class="card">
                         <img src="assets/images/coffee.jpg" alt="Product Image" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title"><a routerLink="/product/{{product.id}}">{{product.blend_name}}</a></h5>
+                            <h5 class="card-title"><a routerLink="/product/{{product.id}}" [queryParams]="{ page: currPage }">{{product.blend_name}}</a></h5>
                             <hr class="hr hr-blurry">
                             <div class="card-text"><span class="fw-bold">Origin</span>: {{product.origin}}</div>
                             <div class="card-text"><span class="fw-bold">Variety</span>: {{product.variety}}</div>

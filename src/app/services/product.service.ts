@@ -10,7 +10,10 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
   
-  /* This method is used to makehttp call to API for fetching list of Products */
+  /**
+   * This function is used to make http call to API for fetching list of Products
+   * @param url API URL
+   */
   getAllProducts(url: string): Observable<Product[]> {
     return this.http.get<Product[]>(url);
   }

@@ -15,6 +15,7 @@ import * as ProductSelector from '../store/selector/product.selectors';
 export class ProductDetailsComponent implements OnInit {
 
   productDetails$!: Observable<Product>;
+  page: number = 1;
 
   constructor(private route: ActivatedRoute, private store: Store, private router: Router){
 
@@ -22,16 +23,28 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     var productId = this.route.snapshot.params['id'];
+    this.route.queryParams.subscribe((params: any) => {
+      if(params.page)
+        this.page = Number(params.page);
+    }
+  );
     this.productDetails$ = this.store.pipe(select(ProductSelector.selectProductById(productId)));
     this.loadProducts(productId);
   }
 
+  /**
+   * Function to load details of a specific Product based on Id
+   * @param productId Id of the product whose details are to be fetched 
+   */
   loadProducts(productId: number){
     this.store.dispatch(ProductActions.loadProductDetails({id: productId}));
   }
 
+  /**
+   * Function to navigate backto the Product list page.
+   */
   goBack(): void {
-    this.router.navigate(['/coffee-store']);
+    this.router.navigate(['/coffee-store'], { queryParams: { page: this.page } });
   }
 
 }
