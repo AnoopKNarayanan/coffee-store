@@ -47,7 +47,7 @@ Open `http://localhost:4200/` in your browser. The application will automaticall
 
 ![2](https://user-images.githubusercontent.com/126202194/228662775-fafd26f9-75dd-4353-b45e-411cabbca054.PNG)
 
-* Click on the Next, Prev or the page numbers to navigate between pages.
+* Click on Next, Prev or the page numbers to navigate between pages.
 
 ![3](https://user-images.githubusercontent.com/126202194/228663024-eaf4b2c5-00af-4d2d-a4f9-11acac4a682d.PNG)
 
