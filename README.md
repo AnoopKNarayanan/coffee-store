@@ -37,6 +37,28 @@ cd coffee-store
 #### Browse the app
 Open `http://localhost:4200/` in your browser. The application will automatically reload if you change any of the source files.
 
+## Application Walk-through
+
+* The landing page will show you a list of items in the coffee store as follows.
+
+![1](https://user-images.githubusercontent.com/126202194/228662628-0cd09fec-d053-4b3e-b454-db134be6600e.PNG)
+
+* Scroll down on the page to view the pagination links.
+
+![2](https://user-images.githubusercontent.com/126202194/228662775-fafd26f9-75dd-4353-b45e-411cabbca054.PNG)
+
+* Click on the Next, Prev or the page numbers to navigate between pages.
+
+![3](https://user-images.githubusercontent.com/126202194/228663024-eaf4b2c5-00af-4d2d-a4f9-11acac4a682d.PNG)
+
+* Click on the name of any item to view further details.
+
+![5](https://user-images.githubusercontent.com/126202194/228663176-09e24a32-9644-4af8-9fd9-4a97191405cc.PNG)
+
+* The Product Details will be displayed as follows. Click on the 'Back to Coffee Store' button to navigate back to the main page.
+
+![4](https://user-images.githubusercontent.com/126202194/228663442-c32d1170-5f4b-48a7-a933-3d3a713e97b9.PNG)
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
