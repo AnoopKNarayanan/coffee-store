@@ -39,7 +39,7 @@ Open `http://localhost:4200/` in your browser. The application will automaticall
 
 ## Application Walk-through
 
-* The landing page will show you a list of items in the coffee store as follows.
+* The landing page will show you a list of items in the coffee store as follows. The application is configured to fetch 50 items in total and display 10 items per page.
 
 ![1](https://user-images.githubusercontent.com/126202194/228662628-0cd09fec-d053-4b3e-b454-db134be6600e.PNG)
 
