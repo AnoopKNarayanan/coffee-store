@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Overview
 
-This example will help you understand how to use the [NgRx](https://ngrx.io/) framework in tandem with your [Angular](https://angular.io/) web application. The application is a simple coffee-store that fetches data from a random API in JSON format, over HTTP and displays the paginated results on screen. It acheives state management through NgRx Store by leveraging the following capabilities:
+This example will help you understand how to use the [NgRx](https://ngrx.io/) framework in tandem with your [Angular](https://angular.io/) web application. The application is a simple coffee-store that fetches data from a random API in JSON format, over HTTP and displays the paginated results on screen. It achieves state management through NgRx Store by leveraging the following capabilities:
 
 * [@ngrx/store](https://ngrx.io/guide/store) - Central repository to store the data fetched from APIs.
 * [@ngrx/effects](https://ngrx.io/guide/effects) - Listens to dispatched actions, processes response and returns new actions to the reducer.
